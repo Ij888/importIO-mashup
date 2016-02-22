@@ -10,9 +10,10 @@ body {
 
 .jumbotron{
 	height:350px;
-	margin-bottom: 0px; /*removed the blank space under the JMBTRN*/
+	margin: 50px 0 0 0; /*removed the blank space under the JMBTRN*/
 	padding: 50px 0;
 	border-radius:;
+	
 }
 
 .container .jumbotron, .container-fluid .jumbotron {
@@ -30,5 +31,5 @@ body {
 	color: white;
 }
 .bg2{
-	display: inline-block;
+	
 }
