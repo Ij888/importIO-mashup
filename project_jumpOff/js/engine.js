@@ -48,15 +48,20 @@ document.getElementsByClassName('bg2').innerHTML= nugget;
 
 var payload = $( ".bg2" ).load("https://api.import.io/store/connector/3bcafba9-b5f3-4feb-a248-6265c0119606/_query?input=webpage/url:https%3A%2F%2Fwww.packtpub.com%2Fpackt%2Foffers%2Ffree-learning&&_apikey=81c93652057b496d886a97b5465b35816a2e3c29f89aeb50093e05ceef67b1fb244271b5156fdafb31f67b08e9eb8a3b99f12fc06f2d6eb1f86d081e206b852b63487fc7f22be6301831da2dda4142fe").hide();
 
-*/
-var APIendpoint = "https://api.import.io/store/connector/3bcafba9-b5f3-4feb-a248-6265c0119606/_query?input=webpage/url:https%3A%2F%2Fwww.packtpub.com%2Fpackt%2Foffers%2Ffree-learning&&_apikey=81c93652057b496d886a97b5465b35816a2e3c29f89aeb50093e05ceef67b1fb244271b5156fdafb31f67b08e9eb8a3b99f12fc06f2d6eb1f86d081e206b852b63487fc7f22be6301831da2dda4142fe";
-$.ajax({
-  dataType: "json",
-  url: APIendpoint,
-  data: data,
-  success: success
+
+var lode = $( ".bg2" ).load( "https://api.import.io/store/connector/3bcafba9-b5f3-4feb-a248-6265c0119606/_query?input=webpage/url:https%3A%2F%2Fwww.packtpub.com%2Fpackt%2Foffers%2Ffree-learning&&_apikey=81c93652057b496d886a97b5465b35816a2e3c29f89aeb50093e05ceef67b1fb244271b5156fdafb31f67b08e9eb8a3b99f12fc06f2d6eb1f86d081e206b852b63487fc7f22be6301831da2dda4142fe", function(data){
+  //console.log(data);
+ return (data);
+  var jsonObj = JSON.parse(data);
+  document.getElementsByClassName('lode').innerHTML = jsonObj.results[0].book;
 });
 
 //$.parseJSON("payload")
 //$('lode').(payload.results[0].book);
+*/
 
+var url = "https://api.import.io/store/connector/3bcafba9-b5f3-4feb-a248-6265c0119606/_query?input=webpage/url:https%3A%2F%2Fwww.packtpub.com%2Fpackt%2Foffers%2Ffree-learning&&_apikey=81c93652057b496d886a97b5465b35816a2e3c29f89aeb50093e05ceef67b1fb244271b5156fdafb31f67b08e9eb8a3b99f12fc06f2d6eb1f86d081e206b852b63487fc7f22be6301831da2dda4142fe";
+
+$('.bg2').load(url,function(response,status,xhr) {
+  $('.lode').html($.parseJSON(response).results[0].book);
+});
