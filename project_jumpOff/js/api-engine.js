@@ -11,17 +11,33 @@ gapi.client.load('your_api_name', 'v1', function() {
   doSomethingAfterLoading();
 }, ROOT);
 
-
-
 console.log(payload);
-
-
-*/
-
-var payload
 
 $(document).ready(function(){
     $("p").click(function(){
         $(this).hide();
     });
 });
+
+*/
+
+var payload = {
+	"offset": 0,
+	"results": [{"book": "The Game Jam Survival Guide"}],
+	"cookies": [],
+	"connectorVersionGuid": "8f316190-c522-43c7-898f-a9945d1e1ab8",
+	"connectorGuid": "3bcafba9-b5f3-4feb-a248-6265c0119606",
+	"pageUrl": "https://www.packtpub.com/packt/offers/free-learning",
+	"outputProperties": [{
+		"name": "my_column",
+		"type": "STRING"
+	}, {
+		"name": "book",
+		"type": "STRING"
+	}]
+};
+
+//var motherlode = (payload.results[0].book);
+//console.log(motherlode);
+
+console.log(payload.results[0].book);
