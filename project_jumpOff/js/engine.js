@@ -40,4 +40,6 @@ var payload = {
 //var motherlode = (payload.results[0].book);
 //console.log(motherlode);
 
-console.log(payload.results[0].book);
+var nugget = payload.results[0].book;
+
+document.getElementsByClassName('bg2').innerHTML= nugget;
