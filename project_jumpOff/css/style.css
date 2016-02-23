@@ -10,9 +10,10 @@ body {
 
 .jumbotron{
 	height:350px;
-	margin: 50px 0 0 0; /*removed the blank space under the JMBTRN*/
-	padding: 50px 0;
+	margin: 50px; /*removed the blank space under the JMBTRN*/
+	
 	border-radius:;
+	background-color: #666;
 	
 }
 
@@ -27,7 +28,7 @@ body {
 
 .paddy{
 	background-color: #333;
-	padding: 50px 10px;
+	padding: ;
 	color: white;
 }
 .bg2{
